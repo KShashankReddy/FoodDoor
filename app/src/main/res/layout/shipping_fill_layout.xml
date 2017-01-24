@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/streetAddressLayout"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/streetAddress"
+                android:hint="Street Address*"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="120dp"
+            android:id="@+id/aptNoLayout"
+            android:layout_below="@id/streetAddressLayout"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aptorSuit"
+                android:hint="#Apt or Suit"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/cityLayout"
+            android:layout_below="@id/streetAddressLayout"
+            android:layout_toEndOf="@id/aptNoLayout"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shippingCity"
+                android:hint="City*"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aptNoLayout"
+            android:id="@+id/sppinnerLayout"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="100dp"
+                android:id="@+id/shippingState"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="100dp"
+                android:id="@+id/shippingCountry"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/zipCodeLayout"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shippingZipcode"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:hint="Zipcode*"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shippingAddressConfirm"
+            android:text="@string/personal_info_shipping_confirm"
+            android:layout_below="@id/sppinnerLayout"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFEA7141</color>
+    <color name="colorPrimaryDark">#f44b06</color>
+    <color name="colorAccen">#4d6dd6</color>
+
+    <color name="colorAccent">#444e4d</color>
+    <color name="toolbarText">#f5f5f4</color>
+    <color name="bottom_selector">#ecebd5</color>
+    <color name="splashBackground">#2b2b2b</color>
+    <color name="splashText">#f2f5f5</color>
+    <color name="bottomTab">#f7f7f1</color>
+    <color name="primary_text">#e95935</color>
+</resources>

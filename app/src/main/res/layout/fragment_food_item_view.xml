@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:windowBackground"
+    android:padding="16dp"
+    tools:context="com.example.shashankreddy.foodserviceordering.fragments.FoodItemViewFragment">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/toolbar_food_view"
+        android:background="?attr/colorPrimary"
+        android:elevation="5dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tool_bar_cart_items"
+                android:textSize="20sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar_food_view"
+        android:textSize="30sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/food_item_view_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/food_item_view_image"
+        android:layout_below="@id/food_item_view_title"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/food_item_view_image"
+        android:id="@+id/food_item_view_reciepee"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/food_item_view_reciepee"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:text="@string/food_quantity"
+        android:id="@+id/food_item_view_price"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/food_item_view_reciepee"
+        android:layout_alignParentEnd="true"
+        android:textSize="15sp"
+        android:text="@string/food_quantity"
+        android:id="@+id/food_item_view_cat"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Quantity_Null"
+        android:id="@+id/quantityError"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_cart_button"
+        android:id="@+id/foodItemAddToCart"
+        android:background="@drawable/button_selector"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/food_item_view_quantity"
+        android:layout_toEndOf="@+id/food_item_view_quantity"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/food_item_view_quantity"
+        android:inputType="number"
+        android:maxLength="2"
+        android:hint="Quantity"
+        android:layout_marginTop="76dp"
+        android:layout_below="@+id/food_item_view_price"
+        android:layout_toEndOf="@+id/food_item_view_price" />
+
+</RelativeLayout>
